@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polls Application</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'polls/style.css' %}">
+</head>
+<body>
+    <h2 class="super-title">Polls List</h2>
+    <section class="container">
+        {% if latest_question_list %}
+        {% for question in latest_question_list %}
+        <a href="{% url 'polls:detail' question.id %}"><div class="question-tab">
+            <h2>
+                {{ question.question_text }}
+            </h2>
+            <p>&dash; {{ question.pub_date }}</p>
+        </div></a>
+        {% endfor %}
+        {% else %}
+        <p>No polls are available.</p>
+        {% endif %}
+    </section>
+    <a href="{% url 'polls:add_form' %}" id="add_question_btn">Add Question</a>
+</body>
+</html>

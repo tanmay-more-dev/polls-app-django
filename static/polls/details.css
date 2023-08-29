@@ -1,0 +1,44 @@
+*{
+    font-family: sans-serif;
+}
+.home-btn{
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px;
+    border: 0.5px solid #846dd8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    background-color: #846dd8;
+    border-bottom-right-radius: 12px;
+}
+.err-msg{
+    color: rgb(234, 1, 1);
+}
+.submit-btn{
+    border-radius: 24px;
+    width: 80px;
+    border: 0.5px solid #846dd8;
+    margin: 12px 24px;
+    padding: 8px;
+    background-color: #846dd8;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: .8s ease;
+    float: right;
+}
+.submit-btn:hover{
+    color: #846dd8;
+    background-color: transparent;
+}
+fieldset{
+    margin: 24px;
+    padding: 24px;
+    border-radius: 24px;
+    border-color: #846dd8;
+}
+.radio-btn{
+    margin: 12px;
+    cursor: pointer;
+}
